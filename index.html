@@ -954,6 +954,13 @@
       transform: translateY(0);
     }
 
+    /* Fallback: if JS doesn't run, show everything */
+    noscript ~ * .reveal,
+    .no-js .reveal {
+      opacity: 1;
+      transform: none;
+    }
+
     /* ── RESPONSIVE ── */
     @media (max-width: 900px) {
       .nosotros-grid  { grid-template-columns: 1fr; gap: 40px; }
@@ -1128,7 +1135,6 @@
           src="doctora.jpg"
           alt="Dra. Julieth Sevillano – Luxe Smile Dental Studio"
           class="nosotros-img"
-          onerror="this.src='https://images.unsplash.com/photo-1651008376811-b90baee60c1f?w=800&q=80'"
         />
         <div class="nosotros-badge">
           <strong>8+</strong>
@@ -1352,7 +1358,7 @@
   <div class="container">
     <div class="footer-inner">
       <div class="footer-logo">Luxe Smile | Dental Studio</div>
-      <p class="footer-text">© 2025 Luxe Smile. Todos los derechos reservados. · Guayaquil, Ecuador</p>
+      <p class="footer-text">© 2026 Luxe Smile. Todos los derechos reservados. · Guayaquil, Ecuador</p>
       <ul class="footer-links">
         <li><a href="#servicios">Servicios</a></li>
         <li><a href="#nosotros">Nosotros</a></li>
