@@ -1407,9 +1407,14 @@
         observer.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.12 });
+  }, { threshold: 0.05, rootMargin: '0px 0px 50px 0px' });
 
   reveals.forEach(el => observer.observe(el));
+
+  // Safety: if any reveal hasn't triggered after 3s, show it
+  setTimeout(() => {
+    reveals.forEach(el => el.classList.add('visible'));
+  }, 3000);
 </script>
 
 </body>
